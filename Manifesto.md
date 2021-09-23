@@ -14,3 +14,13 @@ Compensation will come either as cash or equity.
 
 3. Transparency
 Increased transparency is needed of companies with their employees, customers, and general public.
+
+Why?
+One driver of this is because we see the power and influence these unelected corporations have over our government. We aim to rectify this so that corporations are accountable to someone.  In this case their employees.
+
+Democratic corporation manifesto
+1. Employees should be able to elect their manager.
+2. Employees should be able to fire their CEO.
+..
+10. Consumers should have referendums available to give feedback on products available.
+
