@@ -47,7 +47,8 @@ jobs:
       - name: commit
         run: |
           # Stage the file, commit and push
-          git add .
+          touch blah.txt
+          git add blah.txt
           git commit -m "new date commit"
           git push origin HEAD:deployProd
 
