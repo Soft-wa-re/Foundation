@@ -48,6 +48,9 @@ jobs:
           git status
           ls
           git add .
-          git commit -m "buildbot@soft-wa.re"
           git reset --soft origin/deployProd
+          git status
+          git commit -m "buildbot@soft-wa.re"
+          git status
           git push origin +HEAD:deployProd
+          git status
