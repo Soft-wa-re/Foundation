@@ -36,7 +36,19 @@ jobs:
       - name: Generate Podcast
         run: ${GITHUB_WORKSPACE}/runBlogCast.sh
 
-      - name: Commit & Push changes
-        uses: actions-js/push@main
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: setup git config
+        run: |
+          # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+
+      # - name: Commit & Push changes
+      #   uses: actions-js/push@main
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: commit
+        run: |
+          # Stage the file, commit and push
+          git add time.txt
+          git commit -m "new date commit"
+          git push origin deployProd
