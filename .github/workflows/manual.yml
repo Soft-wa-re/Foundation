@@ -48,6 +48,7 @@ jobs:
         run: |
           git add .
           git commit -m "buildbot@soft-wa.re"
+          git reset --soft origin/deployProd
           git push origin HEAD:deployProd
 
       - name: Commit & Push changes
