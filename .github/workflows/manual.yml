@@ -49,8 +49,3 @@ jobs:
           git commit -m "buildbot@soft-wa.re"
           git reset --soft origin/deployProd
           git push origin HEAD:deployProd
-
-      - name: Commit & Push changes
-        uses: actions-js/push@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
