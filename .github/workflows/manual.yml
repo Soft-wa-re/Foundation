@@ -46,10 +46,8 @@ jobs:
 
       - name: commit
         run: |
-          # Stage the file, commit and push
-          touch blah.txt
-          git add blah.txt
-          git commit -m "new date commit"
+          git add .
+          git commit -m "buildbot@soft-wa.re"
           git push origin HEAD:deployProd
 
       - name: Commit & Push changes
