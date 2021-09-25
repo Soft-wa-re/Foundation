@@ -1,3 +1,6 @@
+---
+blogcast: true
+---
 The Mozilla Foundation
 Bylaws of M.F. Technologies
 Article I - PURPOSE
