@@ -51,4 +51,4 @@ jobs:
           # Stage the file, commit and push
           git add .
           git commit -m "new date commit"
-          git push origin deployProd
+          git push origin HEAD:deployProd
