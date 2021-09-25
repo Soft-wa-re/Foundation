@@ -52,6 +52,6 @@ jobs:
           git push origin HEAD:deployProd
 
       - name: Commit & Push changes
-        uses: actions-js/push@deployProd
+        uses: actions-js/push@main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
