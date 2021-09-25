@@ -43,7 +43,6 @@ jobs:
           git config user.email "actions.github@soft-wa.re"
           git config -l
 
-
       - name: commit
         run: |
           git add .
