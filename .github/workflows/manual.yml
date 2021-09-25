@@ -30,11 +30,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+          persist-credentials: true # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
           fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
 
-      - name: Generate Podcast
-        run: ${GITHUB_WORKSPACE}/runBlogCast.sh
+      #- name: Generate Podcast
+      #  run: ${GITHUB_WORKSPACE}/runBlogCast.sh
 
       - name: setup git config
         run: |
@@ -43,13 +43,15 @@ jobs:
           git config user.email "actions.github@soft-wa.re"
           git config -l
 
-      # - name: Commit & Push changes
-      #   uses: actions-js/push@main
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: commit
         run: |
           # Stage the file, commit and push
           git add .
           git commit -m "new date commit"
           git push origin HEAD:deployProd
+
+      - name: Commit & Push changes
+        uses: actions-js/push@deployProd
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
