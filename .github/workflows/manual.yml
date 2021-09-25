@@ -33,8 +33,8 @@ jobs:
           persist-credentials: true # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
           fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
 
-      #- name: Generate Podcast
-      #  run: ${GITHUB_WORKSPACE}/runBlogCast.sh
+      - name: Generate Podcast
+        run: ${GITHUB_WORKSPACE}/runBlogCast.sh
 
       - name: setup git config
         run: |
@@ -46,7 +46,6 @@ jobs:
 
       - name: commit
         run: |
-          touch blah.txt
           git add .
           git commit -m "buildbot@soft-wa.re"
           git reset --soft origin/deployProd
