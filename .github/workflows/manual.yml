@@ -46,7 +46,7 @@ jobs:
 
       - name: commit
         run: |
-          git add .
+          git add *.mp3
           git reset --soft origin/deployProd
           git commit -m "buildbot@soft-wa.re"
           git push origin +HEAD:deployProd
