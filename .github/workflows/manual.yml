@@ -27,6 +27,6 @@ jobs:
       - name: commit
         run: |
           git add *.mp3
-          git reset --soft origin/deployProd
+          git reset --soft origin/deployDev
           git commit --amend -m "buildbot@soft-wa.re"
           git push origin +HEAD:deployDev
