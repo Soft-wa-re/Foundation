@@ -35,25 +35,16 @@ jobs:
 
       - name: Generate Podcast
         run: |
-          pwd
-          ls .
-          ls ${GITHUB_WORKSPACE}
           ${GITHUB_WORKSPACE}/runBlogCast.sh
 
       - name: setup git config
         run: |
-          # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
           git config user.name "GitHub Actions Bot"
           git config user.email "actions.github@soft-wa.re"
-          git config -l
 
       - name: commit
         run: |
-          git status
           git add *.mp3
           git reset --soft origin/deployProd
-          git status
-          git commit -m "buildbot@soft-wa.re"
-          git status
+          git commit --amend -m "buildbot@soft-wa.re"
           git push origin +HEAD:deployProd
-          git status
