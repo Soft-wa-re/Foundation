@@ -15,6 +15,9 @@ Compensation will come either as cash or equity.
 3. Transparency
 Increased transparency is needed of companies with their employees, customers, and general public.
 
+4. Customers should have the final say over product decisions.
+5. Employees should have the final say over Management decisions.
+
 Why?
 One driver of this is because we see the power and influence these unelected corporations have over our government. We aim to rectify this so that corporations are accountable to someone.  In this case their employees.
 
