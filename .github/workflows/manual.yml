@@ -17,7 +17,9 @@ jobs:
           fetch-depth: 0
 
       - name: Generate Podcast
-        run: ./runBlogCast.sh
+        run: |
+          ./runBlogCast.sh
+          ls
 
       - name: setup git config
         run: |
