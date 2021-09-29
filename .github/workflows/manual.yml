@@ -18,7 +18,7 @@ jobs:
 
       - name: Generate Podcast
         run: |
-          ${GITHUB_WORKSPACE}/runBlogCast.sh
+          "${GITHUB_WORKSPACE}"/runBlogCast.sh
 
       - name: setup git config
         run: |
