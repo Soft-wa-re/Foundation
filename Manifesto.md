@@ -17,6 +17,8 @@ Increased transparency is needed of companies with their employees, customers, a
 
 4. Customers should have the final say over product decisions.
 5. Employees should have the final say over Management decisions.
+5. a. Elections - yearly elections will be held to elect their C - suite executives.  The placement of these executives is intended to be a shortcut for emplementing the 
+
 6. In the event of a disagreement an employee or group of employees shall be able to fork the organization taking a porportial amount of resources and any customers in the directiom the desenting employee(s) so choose.  The amount of resources they can take is porportional to their equity im the company.
 
 Why?
