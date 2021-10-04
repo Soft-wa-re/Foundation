@@ -7,8 +7,8 @@ on:
 
 jobs:
   buildDocker:
-    #runs-on: ubuntu-latest #github/azure cloud free but limited
-    runs-on: self-hosted 
+    runs-on: ubuntu-latest #github/azure cloud free but limited
+    #runs-on: self-hosted 
 
     steps:
       - uses: actions/checkout@v2
