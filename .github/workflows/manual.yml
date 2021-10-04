@@ -1,0 +1,34 @@
+
+name: Deploy Podcast workflow
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  buildDocker:
+    runs-on: ubuntu-latest #github/azure cloud free but limited
+    #runs-on: self-hosted 
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: true
+          fetch-depth: 0
+
+      - name: Generate Podcast
+        run: |
+          ./runBlogCast.sh
+          ls
+
+      - name: setup git config
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions.github@soft-wa.re"
+
+      - name: commit
+        run: |
+          git add *.mp3
+          git reset --soft origin/deployDev
+          git commit --amend -m "buildbot@soft-wa.re"
+          git push origin +HEAD:deployDev
